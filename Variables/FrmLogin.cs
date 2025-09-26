@@ -6,6 +6,7 @@ namespace Variables
 {
     public partial class FrmLogin : Form
     {
+        int contador = 0;
         public FrmLogin()
         {
             InitializeComponent();
@@ -33,10 +34,20 @@ namespace Variables
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-         if (Login(lblUsuario.Text, tbPassword.Text))
+         if (Login(tbUsuario.Text, tbPassword.Text))
             {
-                new Form1().Show();
-                this.Hide();
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+         else
+            {
+                contador++;
+                MessageBox.Show("Contraseña invalida");
+            }
+         if(contador==3)
+            {
+                MessageBox.Show("Usted ha excedido los intentos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
             }
         }
         private Boolean Login(string username, string password)

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.lblUsuario = new System.Windows.Forms.TextBox();
+            this.tbUsuario = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
@@ -45,12 +45,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Usuario";
             // 
-            // lblUsuario
+            // tbUsuario
             // 
-            this.lblUsuario.Location = new System.Drawing.Point(17, 43);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(290, 23);
-            this.lblUsuario.TabIndex = 1;
+            this.tbUsuario.Location = new System.Drawing.Point(17, 43);
+            this.tbUsuario.Name = "tbUsuario";
+            this.tbUsuario.Size = new System.Drawing.Size(290, 23);
+            this.tbUsuario.TabIndex = 1;
             // 
             // lblPassword
             // 
@@ -100,7 +100,7 @@
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.lblPassword);
-            this.Controls.Add(this.lblUsuario);
+            this.Controls.Add(this.tbUsuario);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -116,7 +116,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox lblUsuario;
+        private System.Windows.Forms.TextBox tbUsuario;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.Button btnLogin;
